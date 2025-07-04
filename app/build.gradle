@@ -44,6 +44,7 @@ android {
             buildConfigField "String", "BASE_URL", '"https://students.netoservices.ru/qamid-diplom-backend/"'
         }
     }
+    namespace 'ru.iteco.fmhandroid'
 }
 
 dependencies {
