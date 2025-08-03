@@ -10,12 +10,12 @@ import io.qameta.allure.kotlin.Story;
 import ru.iteco.fmhandroid.ui.utils.DataHelper;
 
 @Epic("Авторизация")
-@Feature("Функционал входа в приложение")
+@Feature("Функционал входа")
 public class AuthTest extends BaseTest {
 
     @Before
     public void setUp() {
-        verifyAuthScreen(authSteps, mainSteps);
+        verifyAuthScreen(authSteps);
     }
 
     @Test

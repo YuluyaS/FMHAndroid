@@ -30,7 +30,7 @@ public abstract class BaseTest {
     public OurMissionSteps ourMissionSteps = new OurMissionSteps();
     public AboutScreenElements aboutScreenElements = new AboutScreenElements();
 
-    public void verifyAuthScreen(AuthSteps authSteps, MainSteps mainSteps) {
+    public void verifyAuthScreen(AuthSteps authSteps) {
         try {
             authSteps.verifyAuthScreenElements();
         } catch (Exception e) {

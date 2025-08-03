@@ -14,93 +14,12 @@ import io.qameta.allure.kotlin.Feature;
 import io.qameta.allure.kotlin.Story;
 
 @Epic("Новости")
-@Feature("Функционал новостей в приложении")
-public class NewsTest extends BaseTest {
+@Feature("Функционал сортировки и фильтрации новостей")
+public class FilterNewsTest extends BaseTest {
 
     @Before
     public void setUp() {
         verifyMainScreen(authSteps, mainSteps);
-    }
-
-    @Test
-    @Story("Проверка создания новости")
-    public void createNewsTest() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-
-        newsSteps.createNews();
-        newsSteps.fillNewsForm(NEWS_CATEGORY_ANNOUNCEMENT, NEWS_TITLE, NEWS_TITLE);
-    }
-
-
-    @Test
-    @Story("Проверка создания новости без категории")
-    public void createNewsNoCategoryTest() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-
-        newsSteps.createNews();
-        newsSteps.fillNewsForm("", NEWS_TITLE, NEWS_TITLE);
-    }
-
-    @Test
-    @Story("Проверка создания новости без заголовка")
-    public void createNewsNoTitleTest() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-
-        newsSteps.createNews();
-        newsSteps.fillNewsForm(NEWS_CATEGORY_ANNOUNCEMENT, "", NEWS_TITLE);
-    }
-
-    @Test
-    @Story("Проверка создания новости без описания")
-    public void createNewsNoDescriptionTest() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-
-        newsSteps.createNews();
-        newsSteps.fillNewsForm(NEWS_CATEGORY_ANNOUNCEMENT, NEWS_TITLE, "");
-    }
-
-    @Test
-    @Story("Проверка удаление новости")
-    public void deleteNewsTest() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-        newsSteps.deleteNews();
-    }
-
-    @Test
-    @Story("Проверка редактирования новости")
-    public void editNewsTest() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-
-        newsSteps.editNews();
-        newsSteps.editNewsForm(NEWS_CATEGORY_ANNOUNCEMENT, NEWS_EDITED_TITLE, NEWS_EDITED_TEXT);
-    }
-
-    @Test
-    @Story("Проверка выхода из формы создания новости")
-    public void cancelCreatingNews() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-
-        newsSteps.createNews();
-        newsSteps.cancelFillForm();
-        newsSteps.checkOnEditPage();
-    }
-
-    @Test
-    @Story("Проверка выхода из формы редктирования новости")
-    public void cancelEditingNews() {
-        mainSteps.openMainMenu();
-        mainSteps.selectMenuItem(MENU_ITEM_NEWS);
-
-        newsSteps.editNews();
-        newsSteps.cancelFillForm();
-        newsSteps.checkOnEditPage();
     }
 
     @Test
@@ -235,5 +154,4 @@ public class NewsTest extends BaseTest {
         newsSteps.applyNews();
         newsSteps.checkOnEditPage();
     }
-
 }

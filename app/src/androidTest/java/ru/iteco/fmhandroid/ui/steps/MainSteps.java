@@ -33,9 +33,9 @@ public class MainSteps {
     }
     @Step("Проверка успешной авторизации")
     public void verifySuccessfulAuth() {
+        onView(isRoot()).perform(waitDisplayed(mainScreenElements.getTrademarkImage(), DataHelper.LOAD_TIMEOUT));
         onView(withId(mainScreenElements.getTrademarkImage()))
                 .check(matches(isDisplayed()));
-        onView(isRoot()).perform(waitDisplayed(mainScreenElements.getTrademarkImage(), DataHelper.LOAD_TIMEOUT));
     }
 
     @Step("Нажатие на бургер-меню")

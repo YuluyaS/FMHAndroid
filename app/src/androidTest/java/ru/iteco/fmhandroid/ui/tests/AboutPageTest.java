@@ -13,8 +13,8 @@ import io.qameta.allure.kotlin.Epic;
 import io.qameta.allure.kotlin.Feature;
 import io.qameta.allure.kotlin.Story;
 
-@Epic("Страница информации о приложении")
-@Feature("Функционал страницы информации о приложении")
+@Epic("Страница информации")
+@Feature("Функционал страницы информации")
 public class AboutPageTest extends BaseTest{
 
     @Before

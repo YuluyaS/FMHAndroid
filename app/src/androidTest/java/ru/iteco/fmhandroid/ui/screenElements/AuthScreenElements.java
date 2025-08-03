@@ -13,39 +13,19 @@ public class AuthScreenElements {
         return loginField;
     }
 
-    public void setLoginField(int loginField) {
-        this.loginField = loginField;
-    }
-
     public int getPasswordField() {
         return passwordField;
     }
-
-    public void setPasswordField(int passwordField) {
-        this.passwordField = passwordField;
-    }
-
+    
     public int getSignInButton() {
         return signInButton;
-    }
-
-    public void setSignInButton(int signInButton) {
-        this.signInButton = signInButton;
     }
 
     public int getAuthTitle() {
         return authTitle;
     }
 
-    public void setAuthTitle(int authTitle) {
-        this.authTitle = authTitle;
-    }
-
     public int getAuthImageButton() {
         return authImageButton;
-    }
-
-    public void setAuthImageButton(int authImageButton) {
-        this.authImageButton = authImageButton;
     }
 }

@@ -1,11 +1,12 @@
 package ru.iteco.fmhandroid.ui.screenElements;
 
-import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
-import androidx.test.espresso.ViewInteraction;
+import android.view.View;
+
+import org.hamcrest.Matcher;
 
 import ru.iteco.fmhandroid.R;
 
@@ -22,37 +23,36 @@ public class NewsScreenElements {
     private int saveButton = R.id.save_button;
     private int confirmButton = android.R.id.button1;
     private int creatingNewsTitle = R.id.custom_app_bar_title_text_view;
-    private ViewInteraction createCategory = onView(withId(R.id.news_item_category_text_auto_complete_text_view));
-    private ViewInteraction filterPage = onView(withText(R.string.filter_news));
+    private int createCategory = R.id.news_item_category_text_auto_complete_text_view;
+    private int filterPage = R.string.filter_news;
 
-    private ViewInteraction categoryFieldSorting = onView(withId(R.id.news_item_category_text_auto_complete_text_view));
-    private final ViewInteraction sortNewsButton = onView(
-            withId(R.id.sort_news_material_button));
+    private int categoryFieldSorting = R.id.news_item_category_text_auto_complete_text_view;
+    private int sortNewsButton = R.id.sort_news_material_button;
 
-    private ViewInteraction filter = onView(withId(R.id.filter_news_material_button));
-    private ViewInteraction startDateButton = onView(withId(R.id.news_item_publish_date_start_text_input_edit_text));
-    private ViewInteraction okButtonSorting = onView(withId(android.R.id.button1));
-    private ViewInteraction filterButton = onView(withId(R.id.filter_button));
-    private ViewInteraction errorMessage = onView(withId(android.R.id.message));
-    private ViewInteraction endDateButton = onView(withId(R.id.news_item_publish_date_end_text_input_edit_text));
-    private ViewInteraction cancelButton = onView(withId(R.id.cancel_button));
-    private ViewInteraction controlPanel = onView(withText("Control panel"));
+    private int filter = R.id.filter_news_material_button;
+    private int startDateButton = R.id.news_item_publish_date_start_text_input_edit_text;
+    private int okButtonSorting = android.R.id.button1;
+    private int filterButton = R.id.filter_button;
+    private int errorMessage = android.R.id.message;
+    private int endDateButton = R.id.news_item_publish_date_end_text_input_edit_text;
+    private int cancelButton = R.id.cancel_button;
+    private Matcher<View> controlPanel = withText("Control panel");
 
-    private ViewInteraction activeCheckBox = onView(
-            allOf(withId(R.id.filter_news_active_material_check_box), withText("Active")));
+    private Matcher<View> activeCheckBox =
+            allOf(withId(R.id.filter_news_active_material_check_box), withText("Active"));
 
-    private ViewInteraction negativeCheckBox = onView(
-            allOf(withId(R.id.filter_news_inactive_material_check_box), withText("Not active")));
+    private Matcher<View> negativeCheckBox =
+            allOf(withId(R.id.filter_news_inactive_material_check_box), withText("Not active"));
 
-    public ViewInteraction getActiveCheckBox() {
+    public Matcher<View> getActiveCheckBox() {
         return activeCheckBox;
     }
 
-    public ViewInteraction getNegativeCheckBox() {
+    public Matcher<View> getNegativeCheckBox() {
         return negativeCheckBox;
     }
 
-    public ViewInteraction getCreateCategory() {
+    public int getCreateCategory() {
         return createCategory;
     }
 
@@ -100,72 +100,51 @@ public class NewsScreenElements {
         return confirmButton;
     }
 
-    // Дублирующие методы (если нужно оставить для совместимости)
-    public int getNewsItemCategoryTextInputLayout() {
-        return categoryField;
-    }
-
-    public int getNewsItemTitleTextInputEditText() {
-        return titleField;
-    }
-
-    public int getNewsItemCreateDateTextInputLayout() {
-        return createDateField;
-    }
-
-    public int getNewsItemPublishTimeTextInputLayout() {
-        return publishTimeField;
-    }
-
-    public int getNewsItemDescriptionTextInputEditText() {
-        return descriptionField;
-    }
-
-    public ViewInteraction getSortNewsButton() {
+    public int getSortNewsButton() {
         return sortNewsButton;
     }
 
-    public ViewInteraction getFilterPage() {
+    public int getFilterPage() {
         return filterPage;
     }
 
-    public ViewInteraction getFilter() {
+    public int getFilter() {
         return filter;
     }
 
-    public ViewInteraction getStartDateButton() {
+    public int getStartDateButton() {
         return startDateButton;
     }
 
-    public ViewInteraction getOkButtonSorting() {
+    public int getOkButtonSorting() {
         return okButtonSorting;
     }
 
-    public ViewInteraction getFilterButton() {
+    public int getFilterButton() {
         return filterButton;
     }
 
-    public ViewInteraction getErrorMessage() {
+    public int getErrorMessage() {
         return errorMessage;
     }
 
-    public ViewInteraction getEndDateButton() {
+    public int getEndDateButton() {
         return endDateButton;
     }
 
-    public ViewInteraction getCancelButton() {
+    public int getCancelButton() {
         return cancelButton;
     }
 
-    public ViewInteraction getCategoryFieldSorting() {
+    public int getCategoryFieldSorting() {
         return categoryFieldSorting;
-    }
-
-    public ViewInteraction getControlPanel() {
-        return controlPanel;
     }
 
     public int getCreatingNewsTitle() {
         return creatingNewsTitle;
+    }
+
+    public Matcher<View> getControlPanel() {
+        return controlPanel;
     }
 }

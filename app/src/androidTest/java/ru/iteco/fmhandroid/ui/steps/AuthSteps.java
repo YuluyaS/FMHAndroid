@@ -13,6 +13,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
+import static java.lang.Thread.sleep;
 import static ru.iteco.fmhandroid.ui.utils.ElementsHelper.waitDisplayed;
 
 import android.view.View;
@@ -54,7 +55,6 @@ public class AuthSteps {
         onView(isRoot()).perform(waitDisplayed(authScreenElements.getSignInButton(), DataHelper.LOAD_TIMEOUT));
         onView(withId(authScreenElements.getSignInButton()))
                 .perform(click());
-        onView(isRoot()).perform(waitDisplayed(mainScreenElements.getTrademarkImage(), DataHelper.LOAD_TIMEOUT));
     }
 
     @Step("Выход из системы")

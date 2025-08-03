@@ -19,6 +19,7 @@ import static ru.iteco.fmhandroid.ui.utils.ElementsHelper.waitDisplayed;
 import androidx.test.espresso.ViewInteraction;
 
 import io.qameta.allure.kotlin.Step;
+import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.screenElements.NewsScreenElements;
 import ru.iteco.fmhandroid.ui.utils.DataHelper;
 import ru.iteco.fmhandroid.ui.utils.ElementsHelper;
@@ -40,7 +41,7 @@ public class NewsSteps {
     public void deleteNews() {
         onView(withId(newsScreenElements.getEditNewsButton()))
                 .perform(click());
-        newsScreenElements.getControlPanel().check(matches(isDisplayed()));
+        onView(newsScreenElements.getControlPanel()).check(matches(isDisplayed()));
         if (isElementDisplayed(onView(ElementsHelper.withIndex(withId(newsScreenElements.getDeleteNewsButton()), 0)))) {
             onView(ElementsHelper.withIndex(withId(newsScreenElements.getDeleteNewsButton()), 0))
                     .perform(click());
@@ -70,8 +71,8 @@ public class NewsSteps {
     @Step("Заполнение формы новости")
     public void fillNewsForm(String category, String title, String description) {
 
-        newsScreenElements.getCreateCategory().perform(click());
-        newsScreenElements.getCreateCategory().perform(replaceText(category));
+        onView(withId(newsScreenElements.getCreateCategory())).perform(click());
+        onView(withId(newsScreenElements.getCreateCategory())).perform(replaceText(category));
 
         onView(withId(newsScreenElements.getTitleField()))
                 .perform(click(), replaceText(title), closeSoftKeyboard());
@@ -97,26 +98,26 @@ public class NewsSteps {
 
     @Step("Выход из заполнения")
     public void cancelFillForm() {
-        newsScreenElements.getCancelButton().perform(click());
+        onView(withId(newsScreenElements.getCancelButton())).perform(click());
         onView(withId(newsScreenElements.getConfirmButton())).perform(click());
     }
 
     @Step("Заполнение формы редактирования новости")
     public void editNewsForm(String category, String title, String description) {
-        ViewInteraction categoryNews = onView(withId(newsScreenElements.getNewsItemCategoryTextInputLayout()));
+        ViewInteraction categoryNews = onView(withId(newsScreenElements.getCategoryField()));
         categoryNews.perform(click());
 
-        onView(withId(newsScreenElements.getNewsItemTitleTextInputEditText()))
+        onView(withId(newsScreenElements.getTitleField()))
                 .perform(click(), replaceText(title), closeSoftKeyboard());
 
-        onView(withId(newsScreenElements.getNewsItemCreateDateTextInputLayout())).perform(click());
+        onView(withId(newsScreenElements.getCreateDateField())).perform(click());
         onView(allOf(withText("OK"), isDescendantOfA(withId(android.R.id.content)))).perform(click());
 
-        onView(withId(newsScreenElements.getNewsItemPublishTimeTextInputLayout())).perform(click());
+        onView(withId(newsScreenElements.getPublishTimeField())).perform(click());
         onView(allOf(withText("OK"), isDescendantOfA(withId(android.R.id.content)))).perform(click());
-        onView(isRoot()).perform(waitDisplayed(newsScreenElements.getNewsItemDescriptionTextInputEditText(), DataHelper.LOAD_TIMEOUT));
+        onView(isRoot()).perform(waitDisplayed(newsScreenElements.getDescriptionField(), DataHelper.LOAD_TIMEOUT));
 
-        onView(withId(newsScreenElements.getNewsItemDescriptionTextInputEditText()))
+        onView(withId(newsScreenElements.getDescriptionField()))
                 .perform(click(), replaceText(description), closeSoftKeyboard());
 
         onView(allOf(withId(newsScreenElements.getSaveButton()), withText("Save"), withContentDescription("Save")))
@@ -125,68 +126,68 @@ public class NewsSteps {
 
     @Step("Сортировка новости")
     public void sortingNews() {
-        newsScreenElements.getSortNewsButton().perform(click());
+        onView(withId(newsScreenElements.getSortNewsButton())).perform(click());
     }
 
     @Step("Проверить, что это oкно Фильтровать новости")
     public void checkFilterNews() {
-        newsScreenElements.getFilterPage().check(matches(isDisplayed()));
+        onView(withText(newsScreenElements.getFilterPage())).check(matches(isDisplayed()));
     }
 
     @Step("Нажать кнопку Фильтровать новости")
     public void filterNews() {
-        newsScreenElements.getFilter().perform(click());
+        onView(withId(newsScreenElements.getFilter())).perform(click());
     }
 
     @Step("Выбрать Дату ОТ")
     public void selectFilterStartDate() {
-        newsScreenElements.getStartDateButton().perform(click());
+        onView(withId(newsScreenElements.getStartDateButton())).perform(click());
     }
 
     @Step("Нажать кнопку ОК")
     public void clickOkButtonSorting() {
-        newsScreenElements.getOkButtonSorting().perform(click());
+        onView(withId(newsScreenElements.getOkButtonSorting())).perform(click());
     }
 
     @Step("Подтверждение фильтрации новостей")
     public void applyNews() {
-        newsScreenElements.getFilterButton().perform(click());
+        onView(withId(newsScreenElements.getFilterButton())).perform(click());
     }
 
     @Step("Вывод сообщения об ошибке")
     public void checkOutputErrorMessage() {
-        newsScreenElements.getErrorMessage().check(matches(isDisplayed()));
+        onView(withId(newsScreenElements.getErrorMessage())).check(matches(isDisplayed()));
     }
 
     @Step("Выбрать Дату ДО")
     public void selectFilterEndDate() {
-        newsScreenElements.getEndDateButton().perform(click());
+        onView(withId(newsScreenElements.getEndDateButton())).perform(click());
     }
 
     @Step("Нажать на кнопку отменить")
     public void clickCancelButton() {
-        newsScreenElements.getCancelButton().perform(click());
+        onView(withId(newsScreenElements.getCancelButton())).perform(click());
     }
 
     @Step("Выбрать категорию в фильтрации")
     public void choseCategoryToFilter(String text) {
-        newsScreenElements.getCategoryFieldSorting().perform(click());
-        newsScreenElements.getCategoryFieldSorting().perform(replaceText(text), closeSoftKeyboard());
+        onView(withId(newsScreenElements.getCategoryFieldSorting())).perform(click());
+        onView(withId(newsScreenElements.getCategoryFieldSorting())).perform(replaceText(text), closeSoftKeyboard());
     }
 
     @Step("Выбрать Active")
     public void choseActive() {
-        newsScreenElements.getActiveCheckBox().perform(click());
+        onView(newsScreenElements.getActiveCheckBox()).perform(click());
     }
 
     @Step("Выбрать Negative")
     public void choseNegative() {
-        newsScreenElements.getNegativeCheckBox().perform(click());
+        onView(newsScreenElements.getNegativeCheckBox()).perform(click());
     }
 
     @Step("Проверка нахождения на панеле редактирования")
     public void checkOnEditPage() {
-        newsScreenElements.getControlPanel().check(matches(isDisplayed()));
+        onView(newsScreenElements.getControlPanel()).check(matches(isDisplayed()));
     }
 
     @Step("Проверка нахождения на панеле создания новости")
