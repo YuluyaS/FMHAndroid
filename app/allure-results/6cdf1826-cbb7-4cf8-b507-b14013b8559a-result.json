@@ -1,0 +1,65 @@
+{
+    "name": "createNewsNoCategoryTest",
+    "start": 1754429915887,
+    "stop": 1754429924663,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "6cdf1826-cbb7-4cf8-b507-b14013b8559a",
+    "historyId": "1cb5747f3d578b0200365f54c38fda6a",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.CreateNewsTest.createNewsNoCategoryTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreateNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "createNewsNoCategoryTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreateNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(70)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        },
+        {
+            "name": "story",
+            "value": "Проверка создания новости без категории"
+        },
+        {
+            "name": "feature",
+            "value": "Функционал создания новостей"
+        },
+        {
+            "name": "epic",
+            "value": "Новости"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "name": "createNewsTest",
+    "start": 1754429896742,
+    "stop": 1754429915846,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "256f413f-b50e-404d-8391-88b29c936b17",
+    "historyId": "f376486280e81ed6be86c1da69c0c32d",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.CreateNewsTest.createNewsTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreateNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "createNewsTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.CreateNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(70)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        },
+        {
+            "name": "story",
+            "value": "Проверка создания новости"
+        },
+        {
+            "name": "feature",
+            "value": "Функционал создания новостей"
+        },
+        {
+            "name": "epic",
+            "value": "Новости"
+        }
+    ]
+}

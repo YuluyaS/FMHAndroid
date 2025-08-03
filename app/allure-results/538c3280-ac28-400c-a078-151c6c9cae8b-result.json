@@ -1,0 +1,65 @@
+{
+    "name": "goToNewsPageFromAboutPageTest",
+    "start": 1754430035146,
+    "stop": 1754430039992,
+    "stage": "finished",
+    "description": "Проверки выхода на страницу новостей из страницы с информацией",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "538c3280-ac28-400c-a078-151c6c9cae8b",
+    "historyId": "cc4ed2713ffef1ece703cd608c9cc5e8",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.AboutPageTest.goToNewsPageFromAboutPageTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.AboutPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "goToNewsPageFromAboutPageTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.AboutPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(69)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        },
+        {
+            "name": "story",
+            "value": "Проверка работы элементов на странице с информацией"
+        },
+        {
+            "name": "epic",
+            "value": "Страница информации"
+        },
+        {
+            "name": "feature",
+            "value": "Функционал страницы информации"
+        }
+    ]
+}

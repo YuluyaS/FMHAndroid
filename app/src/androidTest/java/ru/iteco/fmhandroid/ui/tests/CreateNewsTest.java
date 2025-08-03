@@ -2,8 +2,6 @@ package ru.iteco.fmhandroid.ui.tests;
 
 import static ru.iteco.fmhandroid.ui.utils.DataHelper.MENU_ITEM_NEWS;
 import static ru.iteco.fmhandroid.ui.utils.DataHelper.NEWS_CATEGORY_ANNOUNCEMENT;
-import static ru.iteco.fmhandroid.ui.utils.DataHelper.NEWS_EDITED_TEXT;
-import static ru.iteco.fmhandroid.ui.utils.DataHelper.NEWS_EDITED_TITLE;
 import static ru.iteco.fmhandroid.ui.utils.DataHelper.NEWS_TITLE;
 
 import org.junit.Before;

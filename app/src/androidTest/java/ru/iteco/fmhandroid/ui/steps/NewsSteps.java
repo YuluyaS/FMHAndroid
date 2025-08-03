@@ -19,7 +19,6 @@ import static ru.iteco.fmhandroid.ui.utils.ElementsHelper.waitDisplayed;
 import androidx.test.espresso.ViewInteraction;
 
 import io.qameta.allure.kotlin.Step;
-import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.screenElements.NewsScreenElements;
 import ru.iteco.fmhandroid.ui.utils.DataHelper;
 import ru.iteco.fmhandroid.ui.utils.ElementsHelper;

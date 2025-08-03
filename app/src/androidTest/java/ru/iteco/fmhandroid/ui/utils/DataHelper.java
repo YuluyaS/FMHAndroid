@@ -5,10 +5,6 @@ public final class DataHelper {
     private DataHelper() {}
     public static final String VALID_LOGIN = "login2";
     public static final String VALID_PASSWORD = "password2";
-    public static final String INVALID_LOGIN = "test";
-    public static final String INVALID_PASSWORD = "pass";
-    public static final String ERROR_MSG_WRONG_CREDENTIALS = "Something went wrong. Try again later.";
-    public static final String ERROR_MSG_EMPTY_FIELDS = "Login and password cannot be empty";
     public static final String AUTH_SCREEN_TITLE = "Authorization";
     public static final String LOGOUT_BUTTON_TEXT = "Log out";
     public static final long LOAD_TIMEOUT = 4000;

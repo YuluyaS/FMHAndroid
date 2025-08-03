@@ -1,0 +1,65 @@
+{
+    "name": "checkTermsOfUseAboutPageTest",
+    "start": 1754430026392,
+    "stop": 1754430030917,
+    "stage": "finished",
+    "description": "Проверка перехода на страницу Правила пользования",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "f7c0a4c1-27d3-4750-aa7d-06f54b539e70",
+    "historyId": "8ce21c0406e790d390a2a542cd3f7241",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.AboutPageTest.checkTermsOfUseAboutPageTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.AboutPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "checkTermsOfUseAboutPageTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.AboutPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(69)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        },
+        {
+            "name": "story",
+            "value": "Проверка работы элементов на странице с информацией"
+        },
+        {
+            "name": "epic",
+            "value": "Страница информации"
+        },
+        {
+            "name": "feature",
+            "value": "Функционал страницы информации"
+        }
+    ]
+}

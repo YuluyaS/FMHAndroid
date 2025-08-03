@@ -13,7 +13,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
-import static java.lang.Thread.sleep;
 import static ru.iteco.fmhandroid.ui.utils.ElementsHelper.waitDisplayed;
 
 import android.view.View;
@@ -29,6 +28,7 @@ import ru.iteco.fmhandroid.ui.utils.DataHelper;
 public class AuthSteps {
     private AuthScreenElements authScreenElements = new AuthScreenElements();
     private MainScreenElements mainScreenElements = new MainScreenElements();
+
     @Step("Проверка видимости экрана авторизации")
     public void checkAuthScreenVisible() {
         onView(isRoot()).perform(waitDisplayed(authScreenElements.getAuthTitle(), DataHelper.LOAD_TIMEOUT));
@@ -64,6 +64,7 @@ public class AuthSteps {
         onView(allOf(withId(android.R.id.title), withText(DataHelper.LOGOUT_BUTTON_TEXT)))
                 .perform(click());
     }
+
     @Step("Проверка сообщения об ошибке")
     public void verifyErrorMessage(String message, ActivityScenarioRule<AppActivity> mActivityScenarioRule) {
         final View[] decorView = new View[1];
@@ -74,6 +75,7 @@ public class AuthSteps {
                 .inRoot(withDecorView(not(is(decorView[0]))))
                 .check(matches(isDisplayed()));
     }
+
     @Step("Проверка наличия текста авторизации")
     public void verifyAuthScreenElements() {
         onView(isRoot()).perform(waitDisplayed(authScreenElements.getAuthTitle(), 10000));

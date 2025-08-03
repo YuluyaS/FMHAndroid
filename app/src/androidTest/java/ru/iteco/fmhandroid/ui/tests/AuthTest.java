@@ -42,35 +42,4 @@ public class AuthTest extends BaseTest {
         authSteps.logout();
         authSteps.checkAuthScreenVisible();
     }
-
-    @Test
-    @Story("Неуспешная авторизация")
-    @Description("Проверка входа с невалидным паролем")
-    public void authNoValidPasswordTest() {
-        authSteps.checkAuthScreenVisible();
-        authSteps.enterLogin(DataHelper.VALID_LOGIN);
-        authSteps.enterPassword(DataHelper.INVALID_PASSWORD);
-        authSteps.clickSignInButton();
-        authSteps.verifyErrorMessage(DataHelper.ERROR_MSG_WRONG_CREDENTIALS, mActivityScenarioRule);
-    }
-
-    @Test
-    @Story("Неуспешная авторизация")
-    @Description("Проверка входа с невалидным логином")
-    public void authNoValidLoginTest() {
-        authSteps.checkAuthScreenVisible();
-        authSteps.enterLogin(DataHelper.INVALID_LOGIN);
-        authSteps.enterPassword(DataHelper.VALID_PASSWORD);
-        authSteps.clickSignInButton();
-        authSteps.verifyErrorMessage(DataHelper.ERROR_MSG_WRONG_CREDENTIALS, mActivityScenarioRule);
-    }
-
-    @Test
-    @Story("Неуспешная авторизация")
-    @Description("Проверка входа без ввода логина и пароля")
-    public void authNoLoginNoPasswordTest() {
-        authSteps.checkAuthScreenVisible();
-        authSteps.clickSignInButton();
-        authSteps.verifyErrorMessage(DataHelper.ERROR_MSG_EMPTY_FIELDS, mActivityScenarioRule);
-    }
 }

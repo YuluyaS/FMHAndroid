@@ -1,0 +1,55 @@
+{
+    "name": "ru.iteco.fmhandroid.ui.tests.OurMissionTest",
+    "start": 1754430179979,
+    "stop": 1754430179979,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "skipped",
+    "statusDetails": {
+        "message": "Test ignored (without reason)!"
+    },
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "9776d344-bf86-49a3-beeb-eddcebde954e",
+    "historyId": "f59f9c3e3254e4d687b10a4978a67cd6",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.OurMissionTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.OurMissionTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "ru.iteco.fmhandroid.ui.tests.OurMissionTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.OurMissionTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(69)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

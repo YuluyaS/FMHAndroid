@@ -1,0 +1,65 @@
+{
+    "name": "checkPrivacyPolicyAboutPageTest",
+    "start": 1754430020231,
+    "stop": 1754430026364,
+    "stage": "finished",
+    "description": "Проверка перехода на страницу Политики конфиденциальности",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "1b9dba34-d419-4dd1-a520-f6f44191eb05",
+    "historyId": "664b8b0d2e3735489c5f82d74582d391",
+    "fullName": "ru.iteco.fmhandroid.ui.tests.AboutPageTest.checkPrivacyPolicyAboutPageTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.tests"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.tests.AboutPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "checkPrivacyPolicyAboutPageTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.tests.AboutPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(69)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        },
+        {
+            "name": "story",
+            "value": "Проверка работы элементов на странице с информацией"
+        },
+        {
+            "name": "epic",
+            "value": "Страница информации"
+        },
+        {
+            "name": "feature",
+            "value": "Функционал страницы информации"
+        }
+    ]
+}
